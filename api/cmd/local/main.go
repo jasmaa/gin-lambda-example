@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	store := app.CreateStore()
+	store := app.CreateLocalStore()
 	r := app.CreateRouter(store)
 	log.Printf("Starting server...")
 	r.Run()

@@ -15,7 +15,7 @@ var ginLambda *ginadapter.GinLambda
 func init() {
 	// stdout and stderr are sent to AWS CloudWatch Logs
 	log.Printf("Gin cold start")
-	store := app.CreateStore()
+	store := app.CreateLocalStore()
 	r := app.CreateRouter(store)
 	ginLambda = ginadapter.New(r)
 }

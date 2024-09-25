@@ -14,7 +14,7 @@ func pingHandler(c *gin.Context) {
 	})
 }
 
-func createDashHandler(s *Store) gin.HandlerFunc {
+func createDashHandler(s Store) gin.HandlerFunc {
 	return func(c *gin.Context) {
 
 		var request CreateDashRequest
@@ -38,7 +38,7 @@ func createDashHandler(s *Store) gin.HandlerFunc {
 	}
 }
 
-func listDashesHandler(s *Store) gin.HandlerFunc {
+func listDashesHandler(s Store) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		dashes := s.ListDashes()
 		c.JSON(http.StatusOK, ListDashResponse{
