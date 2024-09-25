@@ -1,6 +1,12 @@
 # Gin Lambda Example
 
-Gin Lambda example
+Gin Lambda example. This example spins up a toy API that allows callers to
+create and list Dashes via CreateDash and ListDashes API operations
+respectively.
+
+NOTE: This sample currently persists Dashes in RAM for the sake of brevity, so
+Dashes are lost once the Lambda function shuts down. This would realistically be
+done with a database instead.
 
 ## Getting started
 
